@@ -4,18 +4,23 @@
     box-sizing: border-box;
 }
 
-
-h1 {
-    text-align: center;
-    margin: 50px 0;
-}
-
-.list-email {
+#id {
     display: flex;
     margin: 10px auto;
-    flex-direction: column;
     width: 1024px;
+    height: 100vh;
+}
+
+h1 {
+    margin: 50px 0;
+    text-align: center;
+}
+
+
+
+.list-email {
     background-color: #c2ccec;
+    list-style: none;
 }
 
 
@@ -25,4 +30,10 @@ h1 {
     width: 100%;
     padding: 10px;
     border-bottom: 1px solid black;
+}
+
+.btn {
+    width: 100px; 
+    margin: 10px auto; 
+    display: block;
 }

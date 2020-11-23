@@ -15,7 +15,12 @@
         <ol class="list-email">
             <li v-for="email in emails"class="data-email">{{email}}</li>
         </ol>
+        <div class="wrapper">
+          <button @click="printAgain"class="btn">Print again</button>  
+        </div>  
+        
     </div>
+    
 
     <!-- Axios Library -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -15,16 +15,28 @@ var app = new Vue({
         const self = this;
         // Call datas for array emails
         for (let i = 0; i < 9; i++){
-
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then(function (response) {
                return self.emails.push(response.data.response)
             })
         }
-        
-
     },
 
     methods: {
-    }
+        // Print again the list
+        printAgain(){
+            console.log('click');
+            //Declare .this
+            const self = this;
+            self.emails = [];
+            // Call datas for array emails
+            for (let i = 0; i < 9; i++) {
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then(function (response) {
+                    return self.emails.push(response.data.response)
+                })
+            }
+        }
+    },
+
 })
