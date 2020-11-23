@@ -8,6 +8,7 @@ var app = new Vue({
     el: '#app',
     data: {
         emails: [],
+        cat: ''
     },
 
     created(){
@@ -19,7 +20,17 @@ var app = new Vue({
             .then(function (response) {
                return self.emails.push(response.data.response)
             })
-        }
+        };
+        //Call cats
+        axios.get('https://aws.random.cat/meow')
+            .then(function (response) {
+                // handle success
+                return self.cat = response.data.file
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
     },
 
     methods: {

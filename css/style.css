@@ -37,3 +37,15 @@ h1 {
     margin: 10px auto; 
     display: block;
 }
+
+.cat-wrapper {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.cat-wrapper img {
+     object-fit: cover;
+     height: 100%;
+    width: 100%;
+}
