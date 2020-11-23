@@ -11,10 +11,10 @@
 </head>
 <body>
     <div id="app">
-        <ul class="list-email">
-            <li class="email">lorem</li>
-            <li class="email">lorem</li>
-        </ul>
+        <h1>List of Email printed from API by Axis</h1>
+        <ol class="list-email">
+            <li v-for="email in emails"class="data-email">{{email}}</li>
+        </ol>
     </div>
 
     <!-- Axios Library -->

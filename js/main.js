@@ -7,17 +7,24 @@ https://flynn.boolean.careers/exercises/api/random/mail
 var app = new Vue({
     el: '#app',
     data: {
-        email: [],
+        emails: [],
     },
+
     created(){
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+        //Declare .this
+        const self = this;
+        // Call datas for array emails
+        for (let i = 0; i < 9; i++){
+
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then(function (response) {
-                // handle success
-                console.log(response);
+               return self.emails.push(response.data.response)
             })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
+        }
+        
+
+    },
+
+    methods: {
     }
 })
